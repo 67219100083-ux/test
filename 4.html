@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Search Curtains - บ้านม่าน ดีไซน์</title>
+
+<script type="text/javascript">
+function MM_swapImgRestore() {
+  var i,x,a=document.MM_sr;
+  for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++)
+    x.src=x.oSrc;
+}
+function MM_preloadImages() {
+  var d=document;
+  if(d.images){
+    if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments;
+    for(i=0; i<a.length; i++)
+      if (a[i].indexOf("#")!=0){
+        d.MM_p[j]=new Image;
+        d.MM_p[j++].src=a[i];
+      }
+  }
+}
+function MM_findObj(n, d) {
+  var p,i,x;
+  if(!d) d=document;
+  if((p=n.indexOf("?"))>0&&parent.frames.length){
+    d=parent.frames[n.substring(p+1)].document;
+    n=n.substring(0,p);
+  }
+  if(!(x=d[n])&&d.all) x=d.all[n];
+  for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++)
+    x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n);
+  return x;
+}
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments;
+  document.MM_sr=new Array;
+  for(i=0;i<(a.length-2);i+=3)
+    if ((x=MM_findObj(a[i]))!=null){
+      document.MM_sr[j++]=x;
+      if(!x.oSrc) x.oSrc=x.src;
+      x.src=a[i+2];
+    }
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('home.png','home (3).png','home (5).png','home (7).png','home (9).png','home (11).png','home (13).png','home (15).png','home (17).png','home (19).png')">
+
+<!-- ===== Banner ===== -->
+<table width="1300" border="1" align="center">
+  <tr>
+    <td>
+      <img src="บ้านม่าน ดีไซน์.png" width="1300" height="200" alt="">
+    </td>
+  </tr>
+</table>
+
+<!-- ===== Menu ===== -->
+<table width="1300" border="1" align="center">
+  <tr>
+    <td width="120"><a href="279.html"><img src="home (1).png" width="120" height="65"></a></td>
+    <td width="118"><a href="2.html"><img src="home (2).png" width="120" height="65"></a></td>
+    <td width="118"><a href="3.html"><img src="home (4).png" width="120" height="65"></a></td>
+    <td width="118"><a href="4.html"><img src="home (6).png" width="120" height="65"></a></td>
+    <td width="118"><a href="#"><img src="home (8).png" width="120" height="65"></a></td>
+    <td width="118"><a href="#"><img src="home (10).png" width="120" height="65"></a></td>
+    <td width="118"><a href="#"><img src="home (12).png" width="120" height="65"></a></td>
+    <td width="118"><a href="#"><img src="home (14).png" width="120" height="65"></a></td>
+    <td width="118"><a href="#"><img src="home (16).png" width="120" height="65"></a></td>
+    <td width="118"><a href="#"><img src="home (18).png" width="120" height="65"></a></td>
+  </tr>
+</table>
+
+<!-- ===== Search Content ===== -->
+<table width="1300" border="0" align="center" cellpadding="20">
+  <tr>
+    <td align="center">
+      <h2>ค้นหาผ้าม่าน</h2>
+    </td>
+  </tr>
+</table>
+
+<form>
+<table width="600" border="1" align="center" cellpadding="10">
+  <tr>
+    <td width="200">รหัสผ้าม่าน</td>
+    <td><input type="text" name="cid"></td>
+  </tr>
+  <tr>
+    <td>ประเภทผ้าม่าน</td>
+    <td>
+      <select name="type">
+        <option>-- เลือกประเภท --</option>
+        <option>ม่านจีบ</option>
+        <option>ม่านตาไก่</option>
+        <option>ม่านโปร่ง</option>
+        <option>ม่านพับ</option>
+        <option>ม่านหลุยส์</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>ช่วงราคา</td>
+    <td>
+      <select name="price">
+        <option>-- เลือกช่วงราคา --</option>
+        <option>ต่ำกว่า 400</option>
+        <option>400 - 600</option>
+        <option>600 - 900</option>
+        <option>มากกว่า 900</option>
+      </select>
+    </td>
+  </tr>
+  <tr align="center">
+    <td colspan="2">
+      <input type="submit" value="ค้นหา">
+      <input type="reset" value="ล้างข้อมูล">
+    </td>
+  </tr>
+</table>
+</form>
+
+</body>
+</html>

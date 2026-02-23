@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Price & Size - บ้านม่าน ดีไซน์</title>
+
+<script type="text/javascript">
+function MM_swapImgRestore() {
+  var i,x,a=document.MM_sr;
+  for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++)
+    x.src=x.oSrc;
+}
+function MM_preloadImages() {
+  var d=document;
+  if(d.images){
+    if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments;
+    for(i=0; i<a.length; i++)
+      if (a[i].indexOf("#")!=0){
+        d.MM_p[j]=new Image;
+        d.MM_p[j++].src=a[i];
+      }
+  }
+}
+function MM_findObj(n, d) {
+  var p,i,x;
+  if(!d) d=document;
+  if((p=n.indexOf("?"))>0&&parent.frames.length){
+    d=parent.frames[n.substring(p+1)].document;
+    n=n.substring(0,p);
+  }
+  if(!(x=d[n])&&d.all) x=d.all[n];
+  for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++)
+    x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n);
+  return x;
+}
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments;
+  document.MM_sr=new Array;
+  for(i=0;i<(a.length-2);i+=3)
+    if ((x=MM_findObj(a[i]))!=null){
+      document.MM_sr[j++]=x;
+      if(!x.oSrc) x.oSrc=x.src;
+      x.src=a[i+2];
+    }
+}
+
+/* ===== Price Calculator ===== */
+function calcPrice(){
+  var w = document.getElementById("width").value;
+  var h = document.getElementById("height").value;
+  var price = document.getElementById("price").value;
+
+  if(w=="" || h=="" || price==""){
+    alert("กรอกข้อมูลให้ครบ");
+    return;
+  }
+
+  var area = w * h;
+  var total = area * price;
+
+  document.getElementById("result").value = total;
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('home.png','home (3).png','home (5).png','home (7).png','home (9).png','home (11).png','home (13).png','home (15).png','home (17).png','home (19).png')">
+
+<!-- ===== Banner ===== -->
+<table width="1300" border="1" align="center">
+  <tr>
+    <td>
+      <img src="บ้านม่าน ดีไซน์.png" width="1300" height="200" alt="">
+    </td>
+  </tr>
+</table>
+
+<!-- ===== Menu ===== -->
+<table width="1300" border="1" align="center">
+  <tr>
+    <td width="120"><a href="279.html"><img src="home (1).png" width="120" height="65"></a></td>
+    <td width="118"><a href="2.html"><img src="home (2).png" width="120" height="65"></a></td>
+    <td width="118"><a href="3.html"><img src="home (4).png" width="120" height="65"></a></td>
+    <td width="118"><a href="4.html"><img src="home (6).png" width="120" height="65"></a></td>
+    <td width="118"><a href="5.html"><img src="home (8).png" width="120" height="65"></a></td>
+    <td width="118"><a href="6.html"><img src="home (10).png" width="120" height="65"></a></td>
+    <td width="118"><a href="#"><img src="home (12).png" width="120" height="65"></a></td>
+    <td width="118"><a href="#"><img src="home (14).png" width="120" height="65"></a></td>
+    <td width="118"><a href="#"><img src="home (16).png" width="120" height="65"></a></td>
+    <td width="118"><a href="#"><img src="home (18).png" width="120" height="65"></a></td>
+  </tr>
+</table>
+
+<!-- ===== Calculator Content ===== -->
+<table width="1300" border="0" align="center" cellpadding="20">
+  <tr>
+    <td align="center">
+      <h2>คำนวณราคาและขนาดผ้าม่าน</h2>
+    </td>
+  </tr>
+</table>
+
+<table width="600" border="1" align="center" cellpadding="10">
+  <tr>
+    <td width="250">ความกว้าง (เมตร)</td>
+    <td><input type="number" id="width"></td>
+  </tr>
+  <tr>
+    <td>ความสูง (เมตร)</td>
+    <td><input type="number" id="height"></td>
+  </tr>
+  <tr>
+    <td>ราคา/ตารางเมตร</td>
+    <td>
+      <select id="price">
+        <option value="">-- เลือกราคา --</option>
+        <option value="300">300</option>
+        <option value="450">450</option>
+        <option value="550">550</option>
+        <option value="600">600</option>
+        <option value="950">950</option>
+      </select>
+    </td>
+  </tr>
+  <tr align="center">
+    <td colspan="2">
+      <button onclick="calcPrice()">คำนวณ</button>
+    </td>
+  </tr>
+  <tr>
+    <td>ราคารวม</td>
+    <td><input type="text" id="result" readonly></td>
+  </tr>
+</table>
+
+</body>
+</html>
